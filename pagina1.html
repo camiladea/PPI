@@ -1,21 +1,68 @@
-<html>
-    <head>
-        <title>Pagina 1</title>
-    </head>
-    <body>
-        <h1>Minha primeira pagina web</h1>
-        
-        <h2>Lista de comandos basicos do git</h2>
-            
-            <ul>
-                <li>git init</li>
-                <li>git add</li>
-                <li>git status</li>
-                <li>git commit</li>
-                <li>git push</li>
-                <li>git log</li>
-                <li>git log --oneline --all</li>
-            </ul>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Comandos Git - Página 1</title>
+    
+</head>
+<body>
 
-    </body>
+    <h1>Página de comandos git</h1>
+
+    <h2>Lista de Comandos Básicos do Git</h2>
+
+    <h2>CONFIGURAÇÃO INICIAL</h2>
+<ul>
+    <li><strong>git config global user.email "camila.a09@aluno.ifsc.edu.br"</strong>: Define seu e-mail para todos os repositórios Git no seu computador.</li>
+    <li><strong>git config global user.name "Camila"</strong>: Define seu nome de usuário globalmente.</li>
+</ul>
+
+<h2>INICIAR E ACOMPANHAR PROJETO</h2>
+<ul>
+    <li><strong>git init</strong>: Cria um novo repositório Git local no diretório atual.</li>
+    <li><strong>git add .</strong>: Adiciona todas as alterações (arquivos novos ou modificados) para a área de preparação (staging).</li>
+    <li><strong>git status</strong>: Mostra o status atual dos arquivos (o que foi modificado, adicionado ou está pronto para commit).</li>
+    <li><strong>git commit</strong>: Cria um commit com os arquivos na área de staging. Usar sem -m abre o editor para digitar a mensagem.</li>
+    <li><strong>git commit -m "app inicial"</strong>: Cria um commit com a mensagem "app inicial".</li>
+</ul>
+
+<h2>HISTÓRICO</h2>
+<ul>
+    <li><strong>git log</strong>: Mostra o histórico completo de commits com detalhes.</li>
+    <li><strong>git log oneline all</strong>: Mostra o histórico em uma linha por commit, incluindo todas as branches.</li>
+</ul>
+
+<h2>CONECTAR AO GITHUB</h2>
+<ul>
+    <li><strong>git remote add origin https://github.com/camiladea/PDM</strong>: Conecta o repositório local ao repositório remoto no GitHub com o nome "origin".</li>
+    <li><strong>git remote -v</strong>: Mostra os repositórios remotos configurados.</li>
+</ul>
+
+<h2>ENVIAR PARA O GITHUB</h2>
+<ul>
+    <li><strong>git push origin master</strong>: Envia os commits da branch master para o repositório remoto.</li>
+    <li><strong>git push origin hello</strong>: Envia os commits da branch hello para o repositório remoto.</li>
+</ul>
+
+<h2>BRANCHES</h2>
+<ul>
+    <li><strong>git branch</strong>: Lista todas as branches existentes no repositório.</li>
+    <li><strong>git checkout -b hello</strong>: Cria uma nova branch chamada hello e muda para ela.</li>
+    <li><strong>git checkout master</strong>: Muda para a branch master.</li>
+</ul>
+
+<h2>FLUXO BÁSICO APÓS EDIÇÃO</h2>
+<ul>
+    <li><strong>git add .</strong>: Adiciona as mudanças após editar arquivos.</li>
+    <li><strong>git commit -m "mensagem"</strong>: Salva as alterações com uma mensagem.</li>
+    <li><strong>git push origin nome-da-branch</strong>: Envia as alterações para o GitHub.</li>
+</ul>
+
+
+    <div class="footer">
+        <span>Link para a página index:</span>
+        <a href="index.html">Ir para página index</a>
+    </div>
+
+</body>
 </html>
