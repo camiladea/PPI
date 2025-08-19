@@ -21,8 +21,8 @@
         background-color: rgb(255, 255, 255);
         font-size: 12pt;
     }
-    table, tr, td{
-        border-collapse: collapse;
+    table, tr, td{ /*linha na tabela*/
+        border-collapse: collapse;  
         border: 1px solid #000000;
     }
 
@@ -123,9 +123,9 @@
     <!-- Tabela -->
     <section>
         <h2>Tabela de Exemplo</h2>
-        <table>
+        <table><!-- cria tabela -->
             <thead>
-                <tr>
+                <tr><!-- linha dentro da tabela -->
                     <th>Nome da pessoa</th>
                     <th>Idade da pessoa</th>
                     <th>Cidade</th>
@@ -167,7 +167,7 @@
 
     </section>
 
-    <!-- Formulário -->
+    <!-- Formulário div>h2{formulario}+input*3-->
     <section>
         <h2>Formulário de Contato</h2>
         <form action="#">
@@ -178,12 +178,18 @@
             <input type="email" id="email" name="email" placeholder="Seu email" required><br><br>
 
             <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem" required></textarea><br><br>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="50" placeholder="Digite sua mensagem" required></textarea><br><br>
             
             <button type="submit">Enviar</button>
         </form>
     </section>
+<div>
+    <h2>formulario</h2>
+    <input type="checkbox">
+    <input type="color">
+    <input type="password">
 
+</div>
 
     <!-- Rodapé -->
     <footer>
