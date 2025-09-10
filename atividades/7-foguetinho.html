@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Foguete</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0b0b3b;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .estrelas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(white 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+
+        .lua {
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 700px;
+            background: #cfcfcf;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .foguete {
+            position: absolute;
+            bottom: 250px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 160px;
+            z-index: 4;
+            animation: pousaDecola 4s ease-in-out infinite alternate;
+        }
+
+        .fumaca {
+            position: absolute;
+            bottom: 230px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: subir 2s infinite, pousaDecola 4s ease-in-out infinite alternate;
+            z-index: 3;
+            filter: blur(5px);
+        }
+
+        .fumaca::before, .fumaca::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            filter: blur(5px);
+        }
+
+        .fumaca::before {
+            left: -30px;
+            animation: subir 3s infinite;
+        }
+
+        .fumaca::after {
+            left: 30px;
+            animation: subir 2.5s infinite;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) scale(2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pousaDecola {
+            0% {
+                transform: translateX(-50%) translateY(0px);
+            }
+            50% {
+                transform: translateX(-50%) translateY(30px);
+            }
+            100% {
+                transform: translateX(-50%) translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="estrelas"></div>
+    <div class="lua"></div>
+    <img src="foguete.png" alt="Foguete" class="foguete">
+    <div class="fumaca"></div>
+</body>
+</html>
