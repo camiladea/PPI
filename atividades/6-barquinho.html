@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Barquinho</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(to top, #87ceeb 0%, #e0f7fa 100%);
+}
+.mar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: #4169e1;
+  overflow: hidden;
+}
+
+@keyframes ondas {
+  from { transform: translateX(0); }
+  to { transform: translateX(50px); }
+}
+.barco {
+  position: absolute;
+  bottom: 35%;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  background: url('barco.png') no-repeat center/contain;
+  animation: navegar 15s linear infinite, balancar 2s ease-in-out infinite alternate;
+  z-index: 2;
+}
+@keyframes navegar {
+  from { left: -150px; }
+  to { left: 100%; }
+}
+@keyframes balancar {
+  from { transform: rotate(-2deg); }
+  to { transform: rotate(2deg); }
+}
+.nuvem {
+  position: absolute;
+  top: 10%;
+  left: -200px;
+  width: 120px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 30px 10px 0 #fff, 60px 0 0 #fff, 90px 15px 0 #fff;
+  animation: moverNuvem 60s linear infinite;
+}
+@keyframes moverNuvem {
+  from { left: -200px; }
+  to { left: 100%; }
+}
+</style>
 </head>
 <body>
-    
+<div class="mar"></div>
+<div class="barco"></div>
+<div class="nuvem"></div>
 </body>
 </html>
