@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        .pagina-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .cabecalho, .rodape {
+            background-color: #aacc22;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .conteudo-principal {
+            display: flex;
+            flex: 1; 
+
+        .artigo {
+            flex: 3;
+            background-color: #ffffff;
+            padding: 1.5rem;
+        }
+
+        .barra-lateral {
+            flex: 1;
+            background-color: #f5f5dc;
+            padding: 1.5rem;
+        }
+
+        .navegacao {
+            flex: 1;
+            background-color: #e6f2e6;
+            padding: 1.5rem;
+        }
+
+        /* Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .conteudo-principal {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pagina-container">
+
+        <header class="cabecalho">
+            <h1>Header</h1>
+        </header>
+
+        <main class="conteudo-principal">
+            <article class="artigo">
+                <h2>Article</h2>
+            </article>
+            <aside class="barra-lateral">
+                <h3>Aside</h3>
+            </aside>
+            <nav class="navegacao">
+                <h3>Nav</h3>
+            </nav>
+        </main>
+
+        <footer class="rodape">
+            <p>Footer</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
