@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .lista-contatos {
+            width: 350px;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .contato {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            gap: 15px;
+        }
+
+        .contato:last-child {
+            border-bottom: none;
+        }
+
+        .contato-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .contato-informacoes {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contato-nome {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .contato-endereco {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lista-contatos">
+
+        <div class="contato">
+            <img class="contato-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Linda Hart">
+            <div class="contato-informacoes">
+                <span class="contato-nome">Linda Hart</span>
+                <span class="contato-endereco">endereço, 6765</span>
+            </div>
+        </div>
+
+        <div class="contato">
+            <img class="contato-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de Roger Medina">
+            <div class="contato-informacoes">
+                <span class="contato-nome">Roger Medina</span>
+                <span class="contato-endereco">endereço bla, 2420</span>
+            </div>
+        </div>
+
+        <div class="contato">
+            <img class="contato-avatar" src="https://randomuser.me/api/portraits/men/46.jpg" alt="Foto de Dean Sullivan">
+            <div class="contato-informacoes">
+                <span class="contato-nome">Dean Sullivan</span>
+                <span class="contato-endereco">endereço bla bla, 6727</span>
+            </div>
+        </div>
+
+        <div class="contato">
+            <img class="contato-avatar" src="https://randomuser.me/api/portraits/women/79.jpg" alt="Foto de Elizabeth Austin">
+            <div class="contato-informacoes">
+                <span class="contato-nome">Elizabeth Austin</span>
+                <span class="contato-endereco">endereço sla, 6865</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
