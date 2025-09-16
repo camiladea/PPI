@@ -1,124 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria Horizontal</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria Horizontal</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
 
-        .galeria-horizontal {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 20px;
-        }
+    .galeria-horizontal {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+    }
 
-        .cartao {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            border-radius: 100vw; /* Padrão para os pequenos */
-            overflow: hidden;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: flex-end;
-            padding: 12px;
-            transition: transform 0.3s ease;
-        }
+    .cartao {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 100vw;
+      overflow: hidden;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+      width: 60px;
+      height: 300px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-        .cartao:hover {
-            transform: translateY(-5px);
-        }
+    .cartao:hover {
+      width: 450px;
+      border-radius: 30px;
+    }
 
-        .cartao-pequeno {
-            width: 60px;
-            height: 300px;
-        }
+    .icone {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid white;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
 
-        .cartao-grande {
-            width: 450px;
-            height: 300px;
-            border-radius: 30px; 
-        }
+    .informacoes {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
-        .icone {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            border: 2px solid white;
-            flex-shrink: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-        }
+    .cartao:hover .informacoes {
+      opacity: 1;
+    }
 
-        .informacoes {
-            display: flex;
-            flex-direction: column;
-            margin-left: 10px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-        }
+    .titulo {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
 
-        .titulo {
-            font-weight: 600;
-            font-size: 1rem;
-            line-height: 1.2;
-        }
+    .subtitulo {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
 
-        .subtitulo {
-            font-size: 0.8rem;
-            opacity: 0.9;
-        }
-        
-        .cor-rosa { background-color: #e53988; }
-        .cor-vermelha { background-color: #e53939; }
-        .cor-amarela { background-color: #ffc107; }
-        .cor-verde { background-color: #4caf50; }
-        .cor-azul { background-color: #1e88e5; }
-    </style>
+    .cor-rosa { background-color: #e53988; }
+    .cor-vermelha { background-color: #e53939; }
+    .cor-amarela { background-color: #ffc107; }
+    .cor-verde { background-color: #4caf50; }
+    .cor-azul { background-color: #1e88e5; }
+  </style>
 </head>
 <body>
 
-    <div class="galeria-horizontal">
+<div class="galeria-horizontal">
 
-        <div class="cartao cartao-pequeno" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400');">
-            <div class="icone cor-rosa">🏃</div>
-        </div>
-
-        <div class="cartao cartao-grande" style="background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800');">
-            <div class="icone cor-vermelha">🌸</div>
-            <div class="informacoes">
-                <span class="titulo">Passeio na Floresta</span>
-                <span class="subtitulo">Trilha de inverno</span>
-            </div>
-        </div>
-
-        <div class="cartao cartao-pequeno" style="background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400');">
-            <div class="icone cor-amarela">🔔</div>
-        </div>
-        
-        <div class="cartao cartao-pequeno" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400');">
-            <div class="icone cor-verde">💧</div>
-        </div>
-
-        <div class="cartao cartao-pequeno" style="background-image: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400');">
-            <div class="icone cor-azul">⚙️</div>
-        </div>
-
+  <div class="cartao" style="background-image: url('gumball.jpg');">
+    <div class="icone cor-rosa">😺</div>
+    <div class="informacoes">
+      <span class="titulo">Gumball</span>
+      <span class="subtitulo">O Incrível Mundo de Gumball</span>
     </div>
+  </div>
+
+  <div class="cartao" style="background-image: url('darwin.png');">
+    <div class="icone cor-verde">🐟</div>
+    <div class="informacoes">
+      <span class="titulo">Darwin</span>
+      <span class="subtitulo">Melhor amigo de Gumball</span>
+    </div>
+  </div>
+
+  <div class="cartao" style="background-image: url('anais.jpg');">
+    <div class="icone cor-amarela">🐰</div>
+    <div class="informacoes">
+      <span class="titulo">Anais</span>
+      <span class="subtitulo">Irmã super inteligente</span>
+    </div>
+  </div>
+
+  <div class="cartao" style="background-image: url('mae.jpg');">
+    <div class="icone cor-vermelha">👩</div>
+    <div class="informacoes">
+      <span class="titulo">Nicole</span>
+      <span class="subtitulo">Mãe da família Watterson</span>
+    </div>
+  </div>
+
+  <div class="cartao" style="background-image: url('pai.jpg');">
+    <div class="icone cor-azul">👨</div>
+    <div class="informacoes">
+      <span class="titulo">Richard</span>
+      <span class="subtitulo">Pai da família Watterson</span>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
