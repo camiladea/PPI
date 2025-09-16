@@ -1,0 +1,25 @@
+
+/* 11 */
+#pond {
+  display: flex; 
+  flex-direction: column; /* A propriedade 'flex-direction' define a direção dos itens dentro do contêiner. 
+  'column' significa que os itens serão organizados em uma coluna */
+  
+  justify-content: flex-end; /* A propriedade 'justify-content' alinha os itens ao longo do eixo principal 
+  (que, neste caso, é o eixo vertical, já que a direção é 'column'). 'flex-end' posiciona os itens no final desse eixo */
+}
+
+
+
+/* 12 */
+#pond {
+  display: flex;
+  
+  flex-direction: column-reverse; /* A propriedade 'flex-direction' agora tem o valor 'column-reverse'. 
+  Isso inverte a direção dos itens: ao invés de organizar de cima para baixo, organiza de baixo para cima. */
+  
+  justify-content: space-between; /* A propriedade 'justify-content' agora tem o valor 'space-between'
+   Isso distribui os itens de forma que o espaço entre eles seja igual. O primeiro item fica no topo (do eixo vertical) e o último item fica na parte inferior.
+    O espaço entre os itens é distribuído igualmente. */
+}
+
