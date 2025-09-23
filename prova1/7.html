@@ -13,8 +13,8 @@
     body{min-width: 100vh;}
 
     .box{
-        height: 10vw;
-        width: 10vw;
+        height: 5vw;
+        width: 5vw;
         display: inline-block;
         border-radius: 50%;
 
@@ -24,27 +24,65 @@
     #item3{ background-color: red;}
     #item4{ background-color: yellow;}
     #item5{ background-color: magenta;}
-
-
-
-    #item2{position: fixed; right: 0px;}
-    #item3{position: fixed; right: 0px; bottom: 0px;}
-    #item4{position: fixed;left: 0px; bottom: 0px;}
-    #item5{position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    }
-    #item1{position: fixed;}
-
-
     </style>
 
 </head>
+</html>
+    <style>
+        body, html {
+            margin: 0px;
+            padding: 0px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            position: relative;
+        }
+
+        .box {
+            height: 10vw;
+            width: 10vw;
+            border-radius: 50%;
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+        }
+
+        #item1 { background-color: blue; z-index: 5; }
+        #item2 { background-color: green; z-index: 4; }
+        #item3 { background-color: red; z-index: 3; }
+        #item4 { background-color: yellow; z-index: 2; }
+        #item5 { background-color: magenta; z-index: 1; }
+
+        #item1 { top: 10%; left: 50%; transform: translateX(-50%); }
+        #item2 { top: 50%; right: 10%; transform: translateY(-50%); }
+        #item3 { bottom: 10%; left: 50%; transform: translateX(-50%); }
+        #item4 { top: 50%; left: 10%; transform: translateY(-50%); }
+        #item5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+        @keyframes rotate-screen {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        body:hover {
+            animation-name: rotate-screen;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+
 <body>
-        <div id="container">
-        <div class="box"id="item1"></div><div class="box"id="item2"></div><div class="box"id="item3"></div><div class="box"id="item4"></div><div class="box"id="item5"></div>
-        
+    <div class="box" id="item1"></div>
+    <div class="box" id="item2"></div>
+    <div class="box" id="item3"></div>
+    <div class="box" id="item4"></div>
+    <div class="box" id="item5"></div>
 </body>
 </html>
-
