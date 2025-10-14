@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <p>Informe seu nome:</p>
+    <input type="text" id = nome>
+    <p>Informe seu peso:</p>
+    <input type="number" id = peso step="0.1">
+     <p>Informe sua altura:</p>
+    <input type="number" id = altura step="0.1">
+    <p></p>
+<button onclick="calcular()">Calcular</button>
+<p></p>
+<p id = "resultadoIMC"></p>
+<p id = "classificacao"></p>
+
+ <img id="imgPerfil" src="./imgs/perfil.jpg" alt="imagem">
+<script>
+    function calcular() {
+        const nome = document.getElementById("nome").value;
+        const peso = parseFloat(document.getElementById("peso").value);
+        const altura = parseFloat(document.getElementById("altura").value);
+        const resultadoIMC = document.getElementById("resultadoIMC");
+        const classificacao = document.getElementById("classificacao");
+        const img = document.getElementById("imgPerfil");
+
+        const imc = peso / (altura * altura);
+        resultadoIMC.textContent = nome + ", seu IMC é " + imc.toFixed(1);
+
+        if (imc < 18.5) {
+            classificacao.textContent = "Abaixo do peso";
+            img.src = "./imgs/abaixopeso.png";
+        } else if (imc < 25) {
+            classificacao.textContent = "Peso normal";
+            img.src = "./imgs/normal.png";
+        } else if (imc < 30) {
+            classificacao.textContent = "Sobrepeso";
+            img.src = "./imgs/sobrepeso.png";
+        } else if (imc < 35) {
+            classificacao.textContent = "Obesidade grau 1";
+            img.src = "./imgs/obesidade1.png";
+        } else if (imc < 40) {
+            classificacao.textContent = "Obesidade grau 2";
+            img.src = "./imgs/obesidade2.png";
+        } else {
+            classificacao.textContent = "Obesidade grau 3 (mórbida)";
+            img.src = "./imgs/obesidade3.png";
+        }
+    }
+</script>
+</body>
+</html>

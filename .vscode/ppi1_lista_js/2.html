@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Variáveis e Operadores</title>
+</head>
+<body>
+
+    <h1>Tipos de Variáveis e Operações</h1>
+    <button onclick="mostrarTipos()">Executar</button>
+
+    <p id="pstring"></p>
+    <p id="pnumero"></p>
+    <p id="pboolean"></p>
+    <p id="pundefined"></p>
+    <p id="pnull"></p>
+    <p id="pobjeto"></p>
+    <p id="parray"></p>
+
+    <h2>Operações entre tipos</h2>
+    <p id="op1"></p>
+    <p id="op2"></p>
+    <p id="op3"></p>
+    <p id="op4"></p>
+
+    <script>
+        function mostrarTipos() {
+            let nome = "João"
+            let idade = 25
+            let ativo = true
+            let indefinido
+            let vazio = null
+            let pessoa = { nome: "Maria", idade: 30 }
+            let lista = [1, 2, 3]
+
+            document.getElementById("pstring").innerText = "nome (string): " + typeof nome
+            document.getElementById("pnumero").innerText = "idade (number): " + typeof idade
+            document.getElementById("pboolean").innerText = "ativo (boolean): " + typeof ativo
+            document.getElementById("pundefined").innerText = "indefinido (undefined): " + typeof indefinido
+            document.getElementById("pnull").innerText = "vazio (null): " + typeof vazio
+            document.getElementById("pobjeto").innerText = "pessoa (object): " + typeof pessoa
+            document.getElementById("parray").innerText = "lista (array): " + typeof lista
+
+            let resultado1 = nome + idade
+            let resultado2 = ativo * idade
+            let resultado3 = nome * 2
+            let resultado4 = vazio + 5
+
+            console.log("String + Number:", resultado1)
+            console.log("Boolean * Number:", resultado2)
+            console.log("String * Number:", resultado3)
+            console.log("Null + Number:", resultado4)
+
+            document.getElementById("op1").innerText = "String + Number ('João' + 25): " + resultado1 + " → Concatena os valores"
+            document.getElementById("op2").innerText = "Boolean * Number (true * 25): " + resultado2 + " → true vira 1"
+            document.getElementById("op3").innerText = "String * Number ('João' * 2): " + resultado3 + " → Resultado é NaN"
+            document.getElementById("op4").innerText = "Null + Number (null + 5): " + resultado4 + " → null vira 0"
+        }
+    </script>
+
+</body>
+</html>
