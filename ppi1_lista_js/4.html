@@ -13,12 +13,12 @@
      <p>Informe sua altura:</p>
     <input type="number" id = altura step="0.1">
     <p></p>
-<button onclick="calcular()">Calcular</button>
+<button onclick="calcular()">Calcule</button>
 <p></p>
 <p id = "resultadoIMC"></p>
 <p id = "classificacao"></p>
 
- <img id="imgPerfil" src="./imgs/perfil.jpg" alt="imagem">
+ <img id="imgPerfil" src="./imagens/perfil.jpg" alt="imagem">
 <script>
     function calcular() {
         const nome = document.getElementById("nome").value;
@@ -33,22 +33,22 @@
 
         if (imc < 18.5) {
             classificacao.textContent = "Abaixo do peso";
-            img.src = "./imgs/abaixopeso.png";
+            img.src = "./imagens/abaixopeso.png";
         } else if (imc < 25) {
             classificacao.textContent = "Peso normal";
-            img.src = "./imgs/normal.png";
+            img.src = "./imagens/normal.png";
         } else if (imc < 30) {
             classificacao.textContent = "Sobrepeso";
-            img.src = "./imgs/sobrepeso.png";
+            img.src = "./imagens/sobrepeso.png";
         } else if (imc < 35) {
             classificacao.textContent = "Obesidade grau 1";
-            img.src = "./imgs/obesidade1.png";
+            img.src = "./imagens/obesidade1.png";
         } else if (imc < 40) {
             classificacao.textContent = "Obesidade grau 2";
-            img.src = "./imgs/obesidade2.png";
+            img.src = "./imagens/obesidade2.png";
         } else {
             classificacao.textContent = "Obesidade grau 3 (mórbida)";
-            img.src = "./imgs/obesidade3.png";
+            img.src = "./imagens/obesidade3.png";
         }
     }
 </script>
