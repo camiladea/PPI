@@ -6,11 +6,11 @@
     <title>IMC</title>
 </head>
 <body>
-    <p>Informe seu nome:</p>
+    <p>Informe seu nome:</p> 
     <input type="text" id = nome>
-    <p>Informe seu peso:</p>
+    <p>Informe seu peso kg:</p>
     <input type="number" id = peso step="0.1">
-     <p>Informe sua altura:</p>
+     <p>Informe sua altura m:</p>
     <input type="number" id = altura step="0.1">
     <p></p>
 <button onclick="calcular()">Calcule</button>
@@ -29,27 +29,27 @@
         const img = document.getElementById("imgPerfil");
 
         const imc = peso / (altura * altura);
-        resultadoIMC.textContent = nome + ", seu IMC é " + imc.toFixed(1);
+        resultadoIMC.textContent = nome + ", seu IMC é " + imc.toFixed(2);
 
-        if (imc < 18.5) {
-            classificacao.textContent = "Abaixo do peso";
-            img.src = "./imagens/abaixopeso.png";
-        } else if (imc < 25) {
-            classificacao.textContent = "Peso normal";
-            img.src = "./imagens/normal.png";
-        } else if (imc < 30) {
-            classificacao.textContent = "Sobrepeso";
-            img.src = "./imagens/sobrepeso.png";
-        } else if (imc < 35) {
-            classificacao.textContent = "Obesidade grau 1";
-            img.src = "./imagens/obesidade1.png";
-        } else if (imc < 40) {
-            classificacao.textContent = "Obesidade grau 2";
-            img.src = "./imagens/obesidade2.png";
-        } else {
-            classificacao.textContent = "Obesidade grau 3 (mórbida)";
-            img.src = "./imagens/obesidade3.png";
-        }
+         if (imc < 18.5) {
+        classificacao.textContent = "Abaixo do peso";
+        img.src = "./imagens/abaixopeso.png";
+    } else if (imc <= 24.9) {
+        classificacao.textContent = "Peso normal";
+        img.src = "./imagens/normal.png";
+    } else if (imc <= 29.9) {
+        classificacao.textContent = "Sobrepeso";
+        img.src = "./imagens/sobrepeso.png";
+    } else if (imc <= 34.9) {
+        classificacao.textContent = "Obesidade grau 1";
+        img.src = "./imagens/obesidade1.png";
+    } else if (imc <= 39.9) {
+        classificacao.textContent = "Obesidade grau 2";
+        img.src = "./imagens/obesidade2.png";
+    } else {
+        classificacao.textContent = "Obesidade grau 3 (mórbida)";
+        img.src = "./imagens/obesidade3.png";
+}
     }
 </script>
 </body>
