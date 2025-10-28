@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Mudar Cor de Fundo</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+<button id="btn">Alterar Cor de Fundo</button>
+<p id="cor"></p>
+<script>
+    
+const btn = document.getElementById('btn')
+const cor = document.getElementById('cor')
+
+function corAleatoria() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')
+}
+btn.onclick = () => {
+  const novaCor = corAleatoria()
+  document.body.style.background = novaCor
+  cor.textContent = novaCor
+  navigator.clipboard.writeText(novaCor)
+}
+</script>
+</body>
+</html>

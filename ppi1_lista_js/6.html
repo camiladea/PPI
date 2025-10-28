@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Números Primos no Intervalo</title>
+</head>
+<body>
+<h1>Números Primos no Intervalo</h1>
+<input type="number" id="inicio" placeholder="Início">
+<input type="number" id="fim" placeholder="Fim">
+<button onclick="verificar()">Verificar</button>
+<div id="resultado"></div>
+<script>
+function ehPrimo(n) {
+  if (n < 2) return false
+  for (let i = 2; i * i <= n; i++) {
+    if (n % i === 0) return false
+  }
+  return true
+}
+function verificar() {
+  const inicioInput = document.getElementById('inicio')
+  const fimInput = document.getElementById('fim')
+  let inicio = parseInt(inicioInput.value)
+  let fim = parseInt(fimInput.value)
+  if (isNaN(inicio) || isNaN(fim)) {
+    document.getElementById('resultado').innerText = 'Digite dois números válidos.'
+    return
+  }
+  if (inicio > fim) [inicio, fim] = [fim, inicio]
+  let primos = []
+  for (let i = inicio; i <= fim; i++) {
+    if (ehPrimo(i)) primos.push(i)
+  }
+  const res = document.getElementById('resultado')
+  res.innerText = primos.length ? 'Primos: ' + primos.join(', ') : 'Nenhum número primo encontrado.'
+}
+</script>
+</body>
+</html>
